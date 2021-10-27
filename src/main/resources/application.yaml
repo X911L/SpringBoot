@@ -1,0 +1,64 @@
+jwt:
+  header: "Authorization" #token返回头部
+  tokenPrefix: "Bearer " #token前缀
+  secret: "qwertyuiop7418520" #密钥
+  expireTime: 60 #token有效时间 (分钟) 建议一小时以上
+
+
+des:
+  encryptKey: "xl_test"
+
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/youhua?useUnicode=true&characterEncoding=utf8&useSSL=false
+
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/test0
+
+mybatis-plus:
+
+
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+      field-strategy: NOT_EMPTY
+
+      db-type: MYSQL
+
+
+  configuration:
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  type-enums-package: com.pure.enums
+#
+#
+#
+#
+#server:
+#  port: 8080
+#
+#  # redis
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    timeout: 3
+#
+#    # password:
+#    pool:
+#      minIdle: 1
+#      maxIdle: 10
+#      maxWait: 3
+#      maxActive: 8
+#

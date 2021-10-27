@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "name": "des",
+      "type": "com.xl.common.util.AntiBrushFilter",
+      "sourceType": "com.xl.common.util.AntiBrushFilter"
+    },
+    {
+      "name": "jwt",
+      "type": "com.xl.common.util.JWTUtils",
+      "sourceType": "com.xl.common.util.JWTUtils"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
