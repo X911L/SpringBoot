@@ -1,6 +1,6 @@
-package com.xl.common;
+package com.xl.common.config;
 
-import com.xl.common.util.AntiBrushFilter;
+import com.xl.common.AntiBrushFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

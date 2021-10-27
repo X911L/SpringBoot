@@ -1,6 +1,8 @@
-package com.xl.common.util;
+package com.xl.common;
 
-import com.xl.common.CommonErrorCode;
+import com.xl.common.exceptionEnum.CommonErrorCode;
+import com.xl.common.util.DesUtils;
+import com.xl.common.util.JacksonUtils;
 import com.xl.exception.ExceptionCast;
 import lombok.SneakyThrows;
 import org.apache.commons.collections4.MapUtils;
@@ -16,7 +18,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -39,17 +40,17 @@ public class AntiBrushFilter implements Filter {
     }
 
     /* 这里设置不被拦截的请求路径 */
-    private static final List<String> unFilterUrlList = Collections.singletonList("/user/registry");
+    //private static final List<String> unFilterUrlList = Collections.singletonList("/user/registry");
 
     /* 判断请求路径是否为不拦截的请求路径 */
-    private boolean isFilter(String url){
-        for(String s: unFilterUrlList) {
-            if(url.contains(s)) {
-                return false;
-            }
-        }
-        return true;
-    }
+    //private boolean isFilter(String url){
+    //    for(String s: unFilterUrlList) {
+    //        if(url.contains(s)) {
+    //            return false;
+    //        }
+    //    }
+    //    return true;
+    //}
 
 
     @Override
@@ -89,34 +90,6 @@ public class AntiBrushFilter implements Filter {
                 ExceptionCast.cast(CommonErrorCode.E_10003);
             }
         }
-
-        //if (isFilter(requestURI)) {
-        //    String antibrush = httpRequest.getHeader("AntiBrush");
-        //    Map<String, String[]> parameterMap = httpRequest.getParameterMap();
-        //
-        //    Map<String, Object> signMap = new HashMap<>();
-        //
-        //    if (ObjectUtils.isNotEmpty(parameterMap)) {
-        //        if (MapUtils.isNotEmpty(parameterMap)) {
-        //            for (String key : parameterMap.keySet()) {
-        //                String val = parameterMap.get(key)[0];
-        //                signMap.put(key, StringUtils.isNotBlank(val) ? val.replace(' ', '+') : val);
-        //            }
-        //        }
-        //    }
-        //
-        //    if (StringUtils.isEmpty(antibrush)) {
-        //        ExceptionCast.cast(CommonErrorCode.E_10005);
-        //    }
-        //
-        //    String signStr = prepareSignStr(signMap);
-        //
-        //    if (Objects.equals(httpRequest.getMethod(),"GET") && Objects.equals(requestURI,"/user/login")) {
-        //        if (!StringUtils.equals(antibrush, DesUtils.encryptDES(signStr, encryptKey))) {
-        //            ExceptionCast.cast(CommonErrorCode.E_10003);
-        //        }
-        //    }
-        //}
 
         filterChain.doFilter(httpRequest, servletResponse);
     }

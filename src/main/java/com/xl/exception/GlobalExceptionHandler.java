@@ -1,7 +1,7 @@
 package com.xl.exception;
 
-import com.xl.common.CommonErrorCode;
-import com.xl.common.ErrorCode;
+import com.xl.common.exceptionEnum.CommonErrorCode;
+import com.xl.common.exceptionEnum.ErrorCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

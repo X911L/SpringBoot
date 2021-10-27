@@ -1,6 +1,6 @@
 package com.xl.exception;
 
-import com.xl.common.ErrorCode;
+import com.xl.common.exceptionEnum.ErrorCode;
 
 /**
  * @author xl

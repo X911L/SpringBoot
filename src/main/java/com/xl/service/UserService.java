@@ -3,7 +3,7 @@ package com.xl.service;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.extension.exceptions.ApiException;
-import com.xl.common.CommonErrorCode;
+import com.xl.common.exceptionEnum.CommonErrorCode;
 import com.xl.common.util.JWTUtils;
 import com.xl.dao.UserTokenDao;
 import com.xl.dao.UserDao;

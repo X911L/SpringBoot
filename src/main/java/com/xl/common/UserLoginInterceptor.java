@@ -1,6 +1,7 @@
 package com.xl.common;
 
 import com.baomidou.mybatisplus.extension.exceptions.ApiException;
+import com.xl.common.exceptionEnum.CommonErrorCode;
 import com.xl.common.util.JWTUtils;
 import com.xl.exception.ExceptionCast;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -16,6 +17,7 @@ import java.util.Objects;
  * 拦截器：验证用户是否登录
  */
 public class UserLoginInterceptor implements HandlerInterceptor {
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         //http的header中获得token

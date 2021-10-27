@@ -1,6 +1,7 @@
-package com.xl.common;
+package com.xl.common.config;
 
-import com.xl.common.util.AntiBrushFilter;
+import com.xl.common.AntiBrushFilter;
+import com.xl.common.UserLoginInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

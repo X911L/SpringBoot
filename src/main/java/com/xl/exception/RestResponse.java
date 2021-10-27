@@ -1,7 +1,7 @@
 package com.xl.exception;
 
-import com.xl.common.CommonErrorCode;
-import com.xl.common.ErrorCode;
+import com.xl.common.exceptionEnum.CommonErrorCode;
+import com.xl.common.exceptionEnum.ErrorCode;
 
 /**
  * 响应通用参数包装

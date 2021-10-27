@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "des",
-      "type": "com.xl.common.util.AntiBrushFilter",
-      "sourceType": "com.xl.common.util.AntiBrushFilter"
+      "type": "com.xl.common.AntiBrushFilter",
+      "sourceType": "com.xl.common.AntiBrushFilter"
     },
     {
       "name": "jwt",
