@@ -1,8 +1,6 @@
-package com.xl.common;
+package com.xl.common.util;
 
 import com.xl.common.exceptionEnum.CommonErrorCode;
-import com.xl.common.util.DesUtils;
-import com.xl.common.util.JacksonUtils;
 import com.xl.exception.ExceptionCast;
 import lombok.SneakyThrows;
 import org.apache.commons.collections4.MapUtils;
@@ -18,7 +16,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

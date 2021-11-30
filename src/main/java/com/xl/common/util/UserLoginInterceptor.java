@@ -1,4 +1,4 @@
-package com.xl.common;
+package com.xl.common.util;
 
 import com.baomidou.mybatisplus.extension.exceptions.ApiException;
 import com.xl.common.exceptionEnum.CommonErrorCode;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 /**
- * @Author: xiang
+ * @Author: X
  * @Date: 2021/5/7 20:56
  * <p>
  * 拦截器：验证用户是否登录
