@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.extension.exceptions.ApiException;
 import com.xl.common.exceptionEnum.CommonErrorCode;
 import com.xl.common.util.JWTUtils;
+import com.xl.common.util.JWTUtilsV2;
 import com.xl.dao.UserTokenDao;
 import com.xl.dao.UserDao;
 import com.xl.exception.ExceptionCast;
@@ -30,7 +31,7 @@ public class UserService {
 
     private final UserTokenDao userTokenDao;
 
-    public void login(String phone, String password) {
+    public String login(String phone, String password) {
 
         User selectUser = getUserByPhone(phone);
 
@@ -42,7 +43,9 @@ public class UserService {
             ExceptionCast.cast(CommonErrorCode.E_10002);
         }
 
-        ExceptionCast.cast(CommonErrorCode.SUCCESS);
+        //ExceptionCast.cast(CommonErrorCode.SUCCESS);
+
+        return getToken(selectUser);
 
     }
 
@@ -72,10 +75,7 @@ public class UserService {
         User insertUser = getUserByPhone(user.getPhone());
 
         //将userId存入token中
-        Token token = new Token();
-        token.setUserId(insertUser.getId());
-        token.setUserTokenId(insertUser.getId());
-        String s = JWTUtils.createToken(token);
+        String s = getToken(insertUser);
 
         UserToken userToken = new UserToken();
         userToken.setToken(s);
@@ -85,6 +85,13 @@ public class UserService {
             throw new ApiException("token保存失败");
         }
         return s;
+    }
+
+    private String getToken(User insertUser) {
+        Token token = new Token();
+        token.setUserId(insertUser.getId());
+        token.setUserTokenId(insertUser.getId());
+        return JWTUtilsV2.getToken(token, 10000L);
     }
 
     public User getUserInfo(Long userId) {

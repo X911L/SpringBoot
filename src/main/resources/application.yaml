@@ -4,6 +4,21 @@ jwt:
   secret: "qwertyuiop7418520" #密钥
   expireTime: 60 #token有效时间 (分钟) 建议一小时以上
 
+xl:
+  jwt:
+    enable: true
+  openApiAesKey: W^^4*&&p33*J5r@F
+  openApiAesIv: M%i2Z0&5M$ZD&779
+  # open\u63A5\u53E3\uFF0C\u7F51\u5173\u6821\u9A8C\u53D6\u7B2C\u4E00\u4E2A
+  openApiKeys:
+    - TngyVSYlM2ReSXdlKiExSA==
+    - JTE1NHMySDQqc3A3NkU3Tw==
+    - QGY4XiVhbzI4M1I2UmMwUQ==
+    - QSUjbTdpeEtAMCZXQCokOQ==
+    - KkdZZ0VzckBDYWhYN15QOQ==
+    - JSozJTEjQGxeJSM2TjQyVA==
+    - SXYmMUAhQFR1KkBCcypGIQ==
+
 
 des:
   encryptKey: "xl_test"
@@ -46,19 +61,19 @@ mybatis-plus:
 #
 #
 #
-#server:
-#  port: 8080
-#
-#  # redis
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    timeout: 3
-#
-#    # password:
-#    pool:
-#      minIdle: 1
-#      maxIdle: 10
-#      maxWait: 3
-#      maxActive: 8
-#
+server:
+  port: 8080
+
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3
+
+    # password:
+    pool:
+      minIdle: 1
+      maxIdle: 10
+      maxWait: 3
+      maxActive: 8
+

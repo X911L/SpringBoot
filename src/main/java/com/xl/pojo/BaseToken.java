@@ -15,7 +15,7 @@ public abstract class BaseToken implements Serializable {
     /**
      * "exp" (Expiration Time)指的是过期时间，假如超过过期时间，则会抛出异常
      */
-    private Long exp;
+    private Integer exp;
     //private Integer exp;
 
     /**

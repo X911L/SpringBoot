@@ -4,20 +4,21 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.baomidou.mybatisplus.extension.exceptions.ApiException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.org.apache.xml.internal.security.keys.KeyUtils;
+import com.xl.pojo.JwtHeader;
 import com.xl.pojo.Token;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import java.beans.BeanInfo;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
-import java.lang.reflect.Method;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,6 +53,46 @@ public class JWTUtils {
 
     //存进客户端的token的key名
     public static final String USER_LOGIN_TOKEN = "USER_LOGIN_TOKEN";
+
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    private final static Map<Integer, String> DIGEST_KEY_MAP = new HashMap<>();
+
+    public static <T> T parseToken(String token, Class<T> clazz) throws Exception {
+        if (StringUtils.isEmpty(token)) {
+            throw new RuntimeException("token cannot be null");
+        }
+        //Integer kid = parseHeader(token).getKid();
+        //if (kid == null) {
+        //    kid = 0;
+        //}
+        //String base64Security = DIGEST_KEY_MAP.get(kid);
+//        Claims claims = parseJWT(token);
+//
+//        if (claims != null) {
+//            String s = MAPPER.writeValueAsString(claims);
+//            return MAPPER.readValue(s, clazz);
+////            BeanUtils.populate(obj, claims);
+//        }
+        Token entity = JacksonUtils.readJson2Entity(token, Token.class);
+        return MAPPER.readValue(token, clazz);
+        //return null;
+    }
+
+    public static Claims parseJWT(String jsonWebToken) {
+        return Jwts.parser().parseClaimsJws(jsonWebToken).getBody();
+    }
+
+    //public static Claims parseJWT(String jsonWebToken, String base64Security) {
+    //    return Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(base64Security))
+    //            .parseClaimsJws(jsonWebToken).getBody();
+    //}
+
+    private static JwtHeader parseHeader(String jsonWebToken) throws IOException {
+        String[] params = StringUtils.split(jsonWebToken, ".");
+        String header = new String(Base64.decodeBase64(params[0]));
+        return MAPPER.readValue(header, JwtHeader.class);
+    }
 
     public void setHeader(String header) {
         JWTUtils.header = header;

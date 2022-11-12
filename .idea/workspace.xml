@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2ce8fc78-3034-4297-993f-716cce1274c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/bean/DigestProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/config/BodyReaderHttpServletRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/ApiSignUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/ApiSignUtilBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/Base64.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/JWTUtilsV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/KeyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/ServletRequestHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/TokenArgumentResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/WebMvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/pojo/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/pojo/JwtHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/pojo/RequestBaseParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/redisPublishAndSubscrible/RedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/redisPublishAndSubscrible/SubListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xl/service/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/xl/redisPublishAndSubscrible/RedisCacheTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/common/config/WebInterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/config/WebInterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/common/util/AntiBrushFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/AntiBrushFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/common/util/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/common/util/UserLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/common/util/UserLoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/pojo/BaseToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/pojo/BaseToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xl/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xl/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/SpringBootJWT.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/AntiBrushFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/UserLoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/config/CorsFilterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/common/config/CorsFilterConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/config/WebFilterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/common/config/WebFilterConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/config/WebInterceptorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/common/config/WebInterceptorConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/common/util/JWTUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/common/util/JWTUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/pojo/BaseToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/pojo/BaseToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xl/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xl/service/UserService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="271" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\develop\repository3_6_1\repository" />
+        <option name="mavenHome" value="D:/develop/repository3_6_1/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\develop\repository3_6_1\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2022fMdKksbYMIiWwjXxpaw8mWt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tyTest02/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.xl.redisPublishAndSubscrible" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xl" />
+      <recent name="com.xl.common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\ideaProject\SpringBootJWT\src\main\java\com\xl\enum" />
+      <recent name="G:\ideaProject\SpringBootJWT\src\main\java\com\xl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.xl.common" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="RedisCacheTest.convertAndSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringBootJWT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xl.redisPublishAndSubscrible.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xl.redisPublishAndSubscrible" />
+      <option name="MAIN_CLASS_NAME" value="com.xl.redisPublishAndSubscrible.RedisCacheTest" />
+      <option name="METHOD_NAME" value="convertAndSend" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBootJWT" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xl.DemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.RedisCacheTest.convertAndSend" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RedisCacheTest.convertAndSend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.19101731" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ce8fc78-3034-4297-993f-716cce1274c6" name="Default Changelist" comment="" />
+      <created>1635228463879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635228463879</updated>
+      <workItem from="1635228466743" duration="29545000" />
+      <workItem from="1637139765018" duration="4989000" />
+      <workItem from="1637229190912" duration="2213000" />
+      <workItem from="1637286124068" duration="2220000" />
+      <workItem from="1637817017721" duration="611000" />
+      <workItem from="1638235713300" duration="376000" />
+      <workItem from="1638587115302" duration="4791000" />
+      <workItem from="1642054725205" duration="4334000" />
+      <workItem from="1666935016255" duration="3162000" />
+      <workItem from="1666953234868" duration="519000" />
+      <workItem from="1667179162173" duration="543000" />
+      <workItem from="1667885482090" duration="7040000" />
+      <workItem from="1667972315957" duration="560000" />
+      <workItem from="1668046782122" duration="592000" />
+      <workItem from="1668228389728" duration="2397000" />
+    </task>
+    <task id="LOCAL-00001" summary="format code">
+      <created>1635314803699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635314803699</updated>
+    </task>
+    <task id="LOCAL-00002" summary="四种解决跨域方法">
+      <created>1637199709211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637199709211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="四种解决跨域方法">
+      <created>1638235767365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638235767365</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="format code" />
+    <MESSAGE value="四种解决跨域方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="四种解决跨域方法" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="715" y="226" width="1000" height="588" key="#xdebugger.evaluate" timestamp="1667895134810">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="226" width="1000" height="588" key="#xdebugger.evaluate/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1667895134810" />
+    <state width="469" height="466" key="DebuggerActiveHint" timestamp="1667888700637">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="469" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1667888700637" />
+    <state x="740" y="221" key="FileChooserDialogImpl" timestamp="1667888813448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="221" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1667888813448" />
+    <state width="1494" height="423" key="GridCell.Tab.0.bottom" timestamp="1668230802895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230802895" />
+    <state width="1494" height="423" key="GridCell.Tab.0.center" timestamp="1668230802895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230802895" />
+    <state width="1494" height="423" key="GridCell.Tab.0.left" timestamp="1668230802895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230802895" />
+    <state width="1494" height="423" key="GridCell.Tab.0.right" timestamp="1668230802895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230802895" />
+    <state width="1494" height="423" key="GridCell.Tab.1.bottom" timestamp="1668230778042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778042" />
+    <state width="1494" height="423" key="GridCell.Tab.1.center" timestamp="1668230778042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778042" />
+    <state width="1494" height="423" key="GridCell.Tab.1.left" timestamp="1668230778042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778042" />
+    <state width="1494" height="423" key="GridCell.Tab.1.right" timestamp="1668230778042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778042" />
+    <state width="1494" height="423" key="GridCell.Tab.2.bottom" timestamp="1668230778043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778043" />
+    <state width="1494" height="423" key="GridCell.Tab.2.center" timestamp="1668230778043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778043" />
+    <state width="1494" height="423" key="GridCell.Tab.2.left" timestamp="1668230778043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778043" />
+    <state width="1494" height="423" key="GridCell.Tab.2.right" timestamp="1668230778043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1494" height="423" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230778043" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1666942304443">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1666942304443" />
+    <state x="690" y="280" key="extract.method.dialog" timestamp="1667888456258">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="280" key="extract.method.dialog/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1667888456258" />
+    <state x="580" y="246" width="759" height="548" key="find.popup" timestamp="1668230070727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="580" y="246" width="759" height="548" key="find.popup/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230070727" />
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1668230700188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup/0.0.1920.1040/-1920.8.1920.1040@0.0.1920.1040" timestamp="1668230700188" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/common/config/CorsFilterConfig.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xl/redisPublishAndSubscrible/RedisCacheTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/controller/LoginController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/common/util/JWTUtils.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/controller/LoginController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/common/util/DesUtils.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/controller/TestController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/common/util/UserLoginInterceptor.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/common/util/JWTUtils.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xl/service/UserService.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SpringBootJWT$DemoApplication.ic" NAME="DemoApplication Coverage Results" MODIFIED="1642056532921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.xl.*</FILTER>
+    </SUITE>
+  </component>
+</project>

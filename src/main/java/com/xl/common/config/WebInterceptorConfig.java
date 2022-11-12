@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.Filter;
 
 @Configuration
+//@ComponentScan
 @ComponentScan(basePackages = "com.xl.common") //全局异常处理类需要被扫描才能
 public class WebInterceptorConfig implements WebMvcConfigurer {
     /**
@@ -21,11 +22,10 @@ public class WebInterceptorConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new UserLoginInterceptor())
-                .addPathPatterns("/user/**")
-                .addPathPatterns("/userInfo/**")
-                .addPathPatterns("/user/login")
-                .excludePathPatterns("/user/registry");//开放注册路径
+        //registry.addInterceptor(new UserLoginInterceptor())
+        //        //.addPathPatterns("/userInfo/**")
+        //        //.addPathPatterns("/user/login")
+        //        .excludePathPatterns("/user/registry");//开放注册路径
     }
 
     @Bean

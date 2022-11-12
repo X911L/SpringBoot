@@ -8,6 +8,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -18,8 +20,27 @@ import java.util.Objects;
  */
 public class UserLoginInterceptor implements HandlerInterceptor {
 
+    /* 这里设置不被拦截的请求路径 */
+    private static final List<String> unFilterUrlList = Collections.singletonList("/user/registry,/user/login");
+
+    /* 判断请求路径是否为不拦截的请求路径 */
+    private boolean isFilter(String url){
+        for(String s: unFilterUrlList) {
+            if(url.contains(s)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+
+        String requestURI = request.getRequestURI();
+        if (isFilter(requestURI)) {
+            return true;
+        }
+
         //http的header中获得token
         String token = request.getHeader(JWTUtils.USER_LOGIN_TOKEN);
         String authorization = request.getHeader("Authorization");
